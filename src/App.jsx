@@ -22,12 +22,12 @@ function App() {
           </nav>
 
           <div id='page'>
-            <div className='head'>
+            {/* <div className='head'>
               <h3>OUR COCKTAILS</h3>
               <h3>OUR HISTORY</h3>
               <h3>CONTACT US</h3>
-            </div>
-              <Drink />
+            </div> */}
+            <Drink />
             <div id='buttons'>
             </div>
           </div>

@@ -9,3 +9,5 @@ To run this app on you machin you need to have a code editor of your choise and 
 ## Usage
 This is a simple app to use it consist of 4 buttons. The first which is a view details button use as the name discribes which is to view the details of the drinks, the second is the pause/play button used to pause or play the carousel from playing in auto and the last 2 button are used to  go to the next or previous drink.
 
+## Preview
+

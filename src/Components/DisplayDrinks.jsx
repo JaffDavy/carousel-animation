@@ -67,38 +67,35 @@ const Drink = ({ cocktailDB }) => {
         setIsHovered(hover)
     }
 
-    const handleAutoplayToggle = () => {
-        setAutoplay(!autoplay)
-    }
-
     return (
         <div className="carousel-container">
             <div
                 className={`carousel-slide ${currentClassName}`}
                 onMouseEnter={() => handleHover(true)}
-                onMouseLeave={() => handleHover(false)}
-            >
-                <img
-                    src={drinksDB[currentDrink]?.strDrinkThumb || ''}
-                    alt={drinksDB[currentDrink]?.strDrink || ''}
-                    className="drinks-display"
-                />
+                onMouseLeave={() => handleHover(false)}>
+                <h3>{drinksDB[currentDrink]?.strDrink || ''}</h3>
+                <div>
+                    <img
+                        src={drinksDB[currentDrink]?.strDrinkThumb || ''}
+                        alt={drinksDB[currentDrink]?.strDrink || ''}
+                        className="drinks-display"
+                    />
+                </div>
+                <h1>{drinksDB.strDrink}</h1>
                 {drinkDetails && (
                     <div className="drink-details">
                         <h3>{drinksDB[currentDrink]?.strDrink || ''}</h3>
                         <p>{drinksDB[currentDrink]?.strInstructions || ''}</p>
                     </div>
                 )}
+                
             </div>
             <div id='control'>
                 <div>
                     <button onClick={toggleDetails} id='details'>View Details</button>
-                    <button onClick={handleAutoplayToggle} className='left'>
-                        {autoplay ? "Pause" : "Play"}
-                    </button>
                 </div>
-                <button onClick={prevDrink} className='left'>Previous</button>
-                <button onClick={nextDrink} className='left'>Next</button>
+                <button onClick={prevDrink} className='left'>&larr;</button>
+                <button onClick={nextDrink} className='left'>&rarr;</button>
             </div>
         </div>
     );

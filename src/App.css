@@ -15,22 +15,16 @@ nav {
 }
 
 .drink-details {
-  color: white;
-  animation: 10s infinite alternate slide-in;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
-@keyframes slide-in {
+@keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
   }
-
-to {
-  margin-left: 0%;
-  width: 100%;
 }
-}
-
 
 #nav-bar {
   background-color: black;
@@ -54,7 +48,7 @@ to {
 #par {
   margin-left: 10rem;
   padding: 50px;
-  min-width: 500px;
+  min-width: 35rem;
   z-index: 5;
   font-size: 3rem;
   font-weight: bolder;
@@ -83,20 +77,20 @@ to {
 }
 
 .drinks-display {
-  height: 80vh;
+  height: 88vh;
   width: 85vw;
   background-size: cover;
   background-position: center;
   transform: translateX();
-  transition: transform 5s ease-in-out; 
-} 
+  animation: slideIn 1s ease-in-out forwards;
+}
 
 #details {
   position: fixed;
   bottom: 0;
-  left: 30%;
+  left: 50%;
   width: 8%;
-  height: 3%;
+  height: 5%;
   border-radius: 1rem;
   margin-bottom: 4rem;
   cursor: pointer;
@@ -124,6 +118,8 @@ to {
   margin-bottom: 5rem;
   display: flex;
   justify-content: space-around;
+  top: 50%;
+  gap: 12rem;
 }
 
 .carousel-slide {
@@ -138,15 +134,14 @@ to {
   transform: translateX(100%);
 }
 
-
 .left {
-  width: 5rem;
-  border-radius: 1rem;
+  height: 3.5rem;
+  border-radius: 5rem;
   cursor: pointer;
   background-color: white;
   color: black;
-  border: none;
-  width: 7rem;
+  width: 10rem;
+  margin-right: 65rem;
 }
 
 .left:hover {
