@@ -1,42 +1,149 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero-page {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes logo-spin {
+nav {
+  width: 15%;
+}
+
+.drink-details {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
   from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    margin-left: 100%;
+    width: 300%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#nav-bar {
+  background-color: black;
+  width: 15%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.card {
-  padding: 2em;
+#page {
+  background-color: black;
+  width: 85%;
+  height: 100vh;
+  /* background: transparent; */
 }
 
-.read-the-docs {
-  color: #888;
+#par {
+  margin-left: 10rem;
+  padding: 50px;
+  min-width: 35rem;
+  z-index: 5;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50%;
+  padding: 3rem;
+}
+
+#logo {
+  background-image: url(/home/davy-arnold/kyrios-projects/carousel-animation/src/assets/cocktail.jpg);
+  background-size: cover;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  width: 8rem;
+  height: 8rem;
+}
+
+#social-media {
+  display: flex;
+  justify-content: space-around;
+}
+
+.drinks-display {
+  height: 88vh;
+  width: 85vw;
+  background-size: cover;
+  background-position: center;
+  transform: translateX();
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+#details {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 8%;
+  height: 5%;
+  border-radius: 1rem;
+  margin-bottom: 4rem;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+#details:hover {
+  opacity: 0.9;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#control {
+  position: fixed;
+  bottom: 0;
+  left: 70%;
+  width: 20%;
+  height: 3%;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-around;
+  top: 50%;
+  gap: 12rem;
+}
+
+.carousel-slide {
+  transition: transform 0.5s ease-in;
+}
+
+.slide-left {
+  transform: translateX(-100%);
+}
+
+.slide-right {
+  transform: translateX(100%);
+}
+
+.left {
+  height: 3.5rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  width: 10rem;
+  margin-right: 65rem;
+}
+
+.left:hover {
+  opacity: 0.9;
 }
